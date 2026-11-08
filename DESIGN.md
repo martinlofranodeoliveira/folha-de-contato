@@ -83,6 +83,8 @@ components:
 
 **Creative North Star: "Mesa de edição"**
 
+Organização escolhida pelo usuário em 08/11/2026: folha grande, edição ao lado e sequência de produtos embaixo. A construção direta em código também foi a opção confirmada.
+
 A interface adota a bancada de montagem: verde profundo na identidade, uma área de trabalho clara e uma folha branca centralizada. O produto editado aparece tanto na página quanto na sequência de miniaturas; o contorno de seleção associa esses dois contextos ao formulário.
 
 A densidade é de ferramenta de edição. Títulos curtos, campos compactos e ações visíveis cercam a prévia. O âmbar marca a entrada de fotos e os estados de atenção; a folha preserva sua própria geometria de impressão ao mudar a largura da janela.
