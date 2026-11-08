@@ -72,6 +72,15 @@ Abra [http://127.0.0.1:4178/](http://127.0.0.1:4178/). O servidor de desenvolvim
 
 Não há dependências JavaScript externas de execução. `npm test` executa os testes Node, incluindo o parsing XML pelo Python. `npm run build` copia a aplicação e seus assets para `dist/` e gera um manifesto de hashes. `npm run check` confere a distribuição contra as fontes e o manifesto; esse comando não substitui uma revisão funcional ou visual no navegador.
 
+## Publicar sua cópia
+
+1. Faça um fork deste repositório no seu GitHub e habilite os workflows na aba **Actions**.
+2. Em **Settings → Pages → Build and deployment → Source**, selecione **GitHub Actions**, conforme o [guia oficial do GitHub](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-with-a-custom-github-actions-workflow).
+3. Na aba **Actions**, execute **Publicar aplicação** pela opção **Run workflow**, usando a branch `main`. O workflow já incluído constrói `dist/`, executa os testes e publica o conteúdo.
+4. Abra o endereço exibido pelo deploy. Para personalizar sua cópia, ajuste a identidade em `index.html`, os estilos em `styles.css` e os links do README, preservando os avisos das licenças.
+
+Em outra hospedagem estática, publique o conteúdo de `dist/` preservando os diretórios. A aplicação usa caminhos relativos para seus módulos, imagens e fontes.
+
 ## Estrutura para adaptar
 
 - [src/model.mjs](src/model.mjs): documento imutável, validação, preços e alterações de produtos.
