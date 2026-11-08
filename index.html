@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Organize fotos, nomes, referências e preços em páginas de catálogo. Ferramenta local, gratuita e open source da LOFRANO TECNOLOGIA.">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' blob: data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>Folha de Contato · catálogo de produtos</title>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="styles.css">
+<script type="module" src="src/app.mjs"></script>
+</head>
+<body>
+<!-- THESIS: A sequência de produtos vira uma folha conferível; a página produzida conduz a edição, em vez de uma lista de configurações.
+OWN-WORLD: Bancada verde-profunda, papel branco, tipografia Lato local e ações âmbar; uma faixa de produtos conserva a ordem do catálogo.
+STORY: A pessoa acrescenta fotos, informa nome/referência/preço, organiza a sequência, confere páginas e baixa arquivos ou o projeto portátil.
+FIRST VIEWPORT: Cabeçalho compacto; folha grande à esquerda e editor à direita; sequência numerada de imagens na base. Selecionar um produto leva à sua página e ao seu formulário.
+FORM: Mesa de edição, bancada de montagem e fotogramas, posição 7 da lista de direções, seed e394078f; construção direta em código conforme escolha do usuário.
+FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md -->
+<a class="skip-link" href="#workspace">Ir para o catálogo</a>
+<header class="app-header">
+ <div class="identity"><svg viewBox="0 0 32 32" aria-hidden="true"><rect x="2" y="2" width="11" height="11" rx="2"/><rect x="19" y="2" width="11" height="11" rx="2"/><rect x="2" y="19" width="11" height="11" rx="2"/><rect x="19" y="19" width="11" height="11" rx="2"/></svg><div><h1>Folha de Contato</h1><p>Seu catálogo, organizado por você.</p></div></div>
+ <nav class="file-actions" aria-label="Projeto">
+  <button id="new-project" class="header-quiet">Novo</button>
+  <button id="open-project" class="header-quiet" data-busy>Abrir projeto</button>
+  <button id="save-project" class="header-outline" data-busy>Salvar projeto</button>
+  <button id="add-images" class="button-accent" data-busy><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 4v12M4 10h12"/></svg>Adicionar fotos</button>
+ </nav>
+</header>
+<main id="workspace" tabindex="-1">
+ <div class="workspace-bar"><div><h2>Seu catálogo</h2><p id="catalog-summary">Preparando o exemplo…</p></div><div class="export-actions"><button id="export-svg" data-busy>Baixar SVG</button><button id="export-png" class="button-dark" data-busy><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 3v10m-4-4 4 4 4-4M4 14v3h12v-3"/></svg>Baixar PNG</button></div></div>
+ <div class="editor-layout">
+  <section class="preview-region" aria-label="Prévia da folha">
+   <div class="preview-toolbar"><span id="sample-badge" class="sample-badge">Exemplo fictício</span><div class="pagination"><button id="previous-page" aria-label="Página anterior"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m12 5-5 5 5 5"/></svg></button><span id="page-label">Sem páginas</span><button id="next-page" aria-label="Próxima página"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m8 5 5 5-5 5"/></svg></button></div><span id="paper-label">A4 · retrato</span></div>
+   <div class="canvas-stage" id="canvas-stage">
+    <div class="paper-wrap" id="paper-wrap" hidden><img id="page-preview" alt=""><div id="selection-frame" class="selection-frame" aria-hidden="true" hidden></div></div>
+    <div class="empty-state" id="empty-state"><svg viewBox="0 0 88 88" aria-hidden="true"><rect x="10" y="10" width="68" height="68" rx="4"/><path d="M20 57 35 39l12 13 9-9 12 14M55 29h.01"/></svg><h3>Um catálogo começa pelas fotos.</h3><p>Adicione imagens PNG ou JPEG. Depois, complete os dados de cada produto.</p><button id="empty-add" class="button-dark" data-busy>Adicionar fotos</button><button id="empty-demo" class="text-button" data-busy>Experimentar com o exemplo</button></div>
+   </div>
+   <p class="preview-caption"><span>O contorno de seleção não aparece no arquivo.</span><a id="open-preview" target="_blank" rel="noopener noreferrer" aria-label="Ampliar página em nova guia" hidden>Ampliar página</a></p>
+  </section>
+  <aside class="inspector" aria-label="Edição do catálogo">
+   <div class="inspector-tabs" role="tablist" aria-label="O que editar"><button id="product-tab" role="tab" aria-selected="true" aria-controls="product-panel">Produto</button><button id="page-tab" role="tab" aria-selected="false" aria-controls="page-panel" tabindex="-1">Página</button></div>
+   <section id="product-panel" role="tabpanel" aria-labelledby="product-tab">
+    <div class="panel-heading"><h3 id="product-heading">Selecione um produto</h3><span id="product-position"></span></div>
+    <p id="product-empty" class="muted">Os dados de cada produto aparecem aqui.</p>
+    <form id="product-form" hidden><fieldset id="product-fields">
+     <label for="item-name">Nome do produto</label><input id="item-name" maxlength="120" autocomplete="off">
+     <label for="item-reference">Referência / SKU <span>opcional</span></label><input id="item-reference" maxlength="32" autocomplete="off">
+     <label for="item-price">Preço em reais <span>opcional</span></label><div class="price-input"><span aria-hidden="true">R$</span><input id="item-price" inputmode="decimal" placeholder="Sem preço" autocomplete="off" aria-describedby="price-help"></div><p class="field-help" id="price-help">Deixe em branco para não exibir preço.</p>
+     <div class="item-tools"><button id="rotate-item" type="button"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7a6 6 0 1 1-1 5M5 3v5h5"/></svg>Girar 90°</button><div class="move-controls"><button id="move-left" type="button" aria-label="Mover produto para antes"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m11 5-5 5 5 5M6 10h10"/></svg></button><button id="move-right" type="button" aria-label="Mover produto para depois"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m9 5 5 5-5 5M4 10h10"/></svg></button></div></div>
+     <div class="file-note"><span>Foto do produto</span><p id="item-file"></p><small id="item-dimensions"></small></div>
+     <button id="remove-item" type="button" class="danger-button">Remover produto</button>
+    </fieldset></form>
+   </section>
+   <section id="page-panel" role="tabpanel" aria-labelledby="page-tab" hidden>
+    <div class="panel-heading"><h3>Configurar folha</h3></div>
+    <form id="page-form"><fieldset id="page-fields">
+     <label for="sheet-title">Título do catálogo</label><input id="sheet-title" maxlength="80" autocomplete="off">
+     <label for="sheet-subtitle">Subtítulo <span>opcional</span></label><input id="sheet-subtitle" maxlength="140" autocomplete="off">
+     <div class="form-row"><div><label for="sheet-paper">Formato</label><select id="sheet-paper"><option value="a4">A4</option><option value="carta">Carta</option></select></div><div><label for="sheet-orientation">Orientação</label><select id="sheet-orientation"><option value="portrait">Retrato</option><option value="landscape">Paisagem</option></select></div></div>
+     <div class="form-row"><div><label for="sheet-columns">Colunas</label><select id="sheet-columns"><option>1</option><option>2</option><option selected>3</option><option>4</option><option>5</option></select></div><div><label for="sheet-rows">Linhas</label><select id="sheet-rows"><option>1</option><option>2</option><option selected>3</option><option>4</option><option>5</option><option>6</option></select></div></div>
+     <label for="sheet-fit">Enquadramento das fotos</label><select id="sheet-fit"><option value="contain">Foto inteira</option><option value="cover">Preencher o quadro</option></select>
+     <label class="check-label"><input id="sheet-numbers" type="checkbox" checked>Numerar produtos</label><label class="check-label"><input id="sheet-prices" type="checkbox" checked>Exibir preços informados</label>
+    </fieldset></form>
+   </section>
+   <div class="memory-note"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 3h10v14H5zM8 6h4M8 10h4M8 14h2"/></svg><p>Seu trabalho fica nesta aba.<br><strong>Salve o projeto para continuar depois.</strong></p></div>
+  </aside>
+  <section class="sequence" aria-labelledby="sequence-heading"><div class="sequence-heading"><h3 id="sequence-heading">Sequência de produtos</h3><span id="sequence-hint">Selecione para editar · até 32 produtos</span></div><ol id="product-sequence"></ol></section>
+ </div>
+ <div id="status" class="status" role="status" aria-live="polite">Preparando exemplo fictício…</div>
+ <div class="usage-note"><p>PNG ou JPEG · até 8 MiB por foto · imagens reduzidas para até 800 px. Preços são informados por você.</p><p><button id="load-demo" class="text-button" data-busy>Carregar exemplo</button><span aria-hidden="true"> · </span><a href="https://github.com/martinlofranodeoliveira/folha-de-contato" target="_blank" rel="noopener noreferrer">Código aberto</a></p></div>
+</main>
+<footer><a href="https://lofranotecnologia.com.br" target="_blank" rel="noopener noreferrer">LOFRANO TECNOLOGIA</a><span>Feito para organizar. Livre para adaptar.</span><a href="LICENSE">Licença MIT</a></footer>
+<input id="image-input" type="file" accept="image/png,image/jpeg,.png,.jpg,.jpeg" multiple hidden><input id="project-input" type="file" accept="application/json,.json" hidden>
+<dialog id="replace-dialog"><form method="dialog"><h2 id="replace-title">Começar outro catálogo?</h2><p>O catálogo aberto será substituído. Salve o projeto se quiser continuar a edição depois.</p><div class="dialog-actions"><button value="cancel">Cancelar</button><button id="confirm-replace" value="confirm" class="button-dark">Continuar</button></div></form></dialog>
+<noscript>Ative JavaScript para organizar e exportar o catálogo. As fotos são processadas no seu navegador.</noscript>
+</body></html>

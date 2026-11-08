@@ -1,0 +1,322 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-08T21:39:20.146862+00:00",
+  "title": "Design System: Folha de Contato",
+  "extensions": {
+    "colorMeta": {
+      "ink": {
+        "role": "primary",
+        "displayName": "Verde de bancada",
+        "tonalRamp": [
+          "oklch(15% 0.0343 165.08)",
+          "oklch(27% 0.0343 165.08)",
+          "oklch(38% 0.0343 165.08)",
+          "oklch(50% 0.0343 165.08)",
+          "oklch(61% 0.0343 165.08)",
+          "oklch(73% 0.0343 165.08)",
+          "oklch(84% 0.0343 165.08)",
+          "oklch(95% 0.0343 165.08)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Verde de leitura secundária",
+        "tonalRamp": [
+          "oklch(15% 0.0254 153.56)",
+          "oklch(27% 0.0254 153.56)",
+          "oklch(38% 0.0254 153.56)",
+          "oklch(50% 0.0254 153.56)",
+          "oklch(61% 0.0254 153.56)",
+          "oklch(73% 0.0254 153.56)",
+          "oklch(84% 0.0254 153.56)",
+          "oklch(95% 0.0254 153.56)"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Papel",
+        "tonalRamp": [
+          "oklch(15% 0.0000 0.00)",
+          "oklch(27% 0.0000 0.00)",
+          "oklch(38% 0.0000 0.00)",
+          "oklch(50% 0.0000 0.00)",
+          "oklch(61% 0.0000 0.00)",
+          "oklch(73% 0.0000 0.00)",
+          "oklch(84% 0.0000 0.00)",
+          "oklch(95% 0.0000 0.00)"
+        ]
+      },
+      "ground": {
+        "role": "neutral",
+        "displayName": "Área de trabalho",
+        "tonalRamp": [
+          "oklch(15% 0.0067 115.71)",
+          "oklch(27% 0.0067 115.71)",
+          "oklch(38% 0.0067 115.71)",
+          "oklch(50% 0.0067 115.71)",
+          "oklch(61% 0.0067 115.71)",
+          "oklch(73% 0.0067 115.71)",
+          "oklch(84% 0.0067 115.71)",
+          "oklch(95% 0.0067 115.71)"
+        ]
+      },
+      "stage": {
+        "role": "neutral",
+        "displayName": "Base de montagem",
+        "tonalRamp": [
+          "oklch(15% 0.0154 123.06)",
+          "oklch(27% 0.0154 123.06)",
+          "oklch(38% 0.0154 123.06)",
+          "oklch(50% 0.0154 123.06)",
+          "oklch(61% 0.0154 123.06)",
+          "oklch(73% 0.0154 123.06)",
+          "oklch(84% 0.0154 123.06)",
+          "oklch(95% 0.0154 123.06)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Linha vegetal",
+        "tonalRamp": [
+          "oklch(15% 0.0186 134.94)",
+          "oklch(27% 0.0186 134.94)",
+          "oklch(38% 0.0186 134.94)",
+          "oklch(50% 0.0186 134.94)",
+          "oklch(61% 0.0186 134.94)",
+          "oklch(73% 0.0186 134.94)",
+          "oklch(84% 0.0186 134.94)",
+          "oklch(95% 0.0186 134.94)"
+        ]
+      },
+      "accent": {
+        "role": "primary",
+        "displayName": "Âmbar de ação",
+        "tonalRamp": [
+          "oklch(15% 0.1229 81.76)",
+          "oklch(27% 0.1229 81.76)",
+          "oklch(38% 0.1229 81.76)",
+          "oklch(50% 0.1229 81.76)",
+          "oklch(61% 0.1229 81.76)",
+          "oklch(73% 0.1229 81.76)",
+          "oklch(84% 0.1229 81.76)",
+          "oklch(95% 0.1229 81.76)"
+        ]
+      },
+      "accent-ink": {
+        "role": "neutral",
+        "displayName": "Tinta sobre âmbar",
+        "tonalRamp": [
+          "oklch(15% 0.0439 80.64)",
+          "oklch(27% 0.0439 80.64)",
+          "oklch(38% 0.0439 80.64)",
+          "oklch(50% 0.0439 80.64)",
+          "oklch(61% 0.0439 80.64)",
+          "oklch(73% 0.0439 80.64)",
+          "oklch(84% 0.0439 80.64)",
+          "oklch(95% 0.0439 80.64)"
+        ]
+      },
+      "error": {
+        "role": "semantic",
+        "displayName": "Vermelho de erro",
+        "tonalRamp": [
+          "oklch(15% 0.1471 28.37)",
+          "oklch(27% 0.1471 28.37)",
+          "oklch(38% 0.1471 28.37)",
+          "oklch(50% 0.1471 28.37)",
+          "oklch(61% 0.1471 28.37)",
+          "oklch(73% 0.1471 28.37)",
+          "oklch(84% 0.1471 28.37)",
+          "oklch(95% 0.1471 28.37)"
+        ]
+      },
+      "focus": {
+        "role": "semantic",
+        "displayName": "Âmbar de foco",
+        "tonalRamp": [
+          "oklch(15% 0.1310 58.10)",
+          "oklch(27% 0.1310 58.10)",
+          "oklch(38% 0.1310 58.10)",
+          "oklch(50% 0.1310 58.10)",
+          "oklch(61% 0.1310 58.10)",
+          "oklch(73% 0.1310 58.10)",
+          "oklch(84% 0.1310 58.10)",
+          "oklch(95% 0.1310 58.10)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "identity": {
+        "displayName": "identity",
+        "purpose": "Título da ferramenta."
+      },
+      "headline": {
+        "displayName": "headline",
+        "purpose": "Título da área de catálogo."
+      },
+      "title": {
+        "displayName": "title",
+        "purpose": "Contexto do formulário atual."
+      },
+      "field": {
+        "displayName": "field",
+        "purpose": "Valores editáveis."
+      },
+      "label": {
+        "displayName": "label",
+        "purpose": "Identificação dos campos."
+      }
+    },
+    "shadows": [
+      {
+        "name": "paper",
+        "value": "0 10px 28px #20372d26",
+        "purpose": "Folha sobre a bancada."
+      },
+      {
+        "name": "dialog",
+        "value": "0 20px 65px #172a2540",
+        "purpose": "Diálogo modal."
+      }
+    ],
+    "motion": [
+      {
+        "name": "paper-arrives-duration",
+        "value": ".38s",
+        "purpose": "Entrada por brilho e sombra."
+      },
+      {
+        "name": "paper-arrives-easing",
+        "value": "cubic-bezier(.16,1,.3,1)",
+        "purpose": "Curva da entrada da folha."
+      },
+      {
+        "name": "button-active",
+        "value": "translateY(1px)",
+        "purpose": "Resposta ao pressionar; desativada com movimento reduzido."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "narrow-actions",
+        "value": "380px"
+      },
+      {
+        "name": "stacked-editor",
+        "value": "760px"
+      },
+      {
+        "name": "compact-desktop",
+        "value": "1000px"
+      },
+      {
+        "name": "wide-editor",
+        "value": "1450px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Baixar SVG",
+      "kind": "button",
+      "refersTo": "button-default",
+      "description": "Ação default da interface.",
+      "html": "<button class=\"ds-btn ds-default\">Baixar SVG</button>",
+      "css": ".ds-btn{font-family:Lato,sans-serif;font-size:16px;font-weight:700;min-height:40px;padding:9px 13px;border:1px solid var(--line,#c6cec2);border-radius:7px;cursor:pointer}.ds-btn:focus-visible{outline:3px solid var(--focus,#b46518);outline-offset:3px}.ds-btn:active:not(:disabled){transform:translateY(1px)}.ds-btn:disabled{opacity:.45;cursor:not-allowed}@media(prefers-reduced-motion:reduce){.ds-btn:active:not(:disabled){transform:none}}.ds-default{background:var(--paper,#fff);color:var(--ink,#20372d);}.ds-default:hover:not(:disabled){background:#e9ede5;border-color:#96a48f}"
+    },
+    {
+      "name": "Adicionar fotos",
+      "kind": "button",
+      "refersTo": "button-accent",
+      "description": "Ação accent da interface.",
+      "html": "<button class=\"ds-btn ds-accent\">Adicionar fotos</button>",
+      "css": ".ds-btn{font-family:Lato,sans-serif;font-size:16px;font-weight:700;min-height:40px;padding:9px 13px;border:1px solid var(--line,#c6cec2);border-radius:7px;cursor:pointer}.ds-btn:focus-visible{outline:3px solid var(--focus,#b46518);outline-offset:3px}.ds-btn:active:not(:disabled){transform:translateY(1px)}.ds-btn:disabled{opacity:.45;cursor:not-allowed}@media(prefers-reduced-motion:reduce){.ds-btn:active:not(:disabled){transform:none}}.ds-accent{background:var(--accent,#e9b95d);color:var(--accent-ink,#3e3017);border-color:var(--accent,#e9b95d);}.ds-accent:hover:not(:disabled){background:#f0c978;border-color:#f0c978}"
+    },
+    {
+      "name": "Baixar PNG",
+      "kind": "button",
+      "refersTo": "button-dark",
+      "description": "Ação dark da interface.",
+      "html": "<button class=\"ds-btn ds-dark\">Baixar PNG</button>",
+      "css": ".ds-btn{font-family:Lato,sans-serif;font-size:16px;font-weight:700;min-height:40px;padding:9px 13px;border:1px solid var(--line,#c6cec2);border-radius:7px;cursor:pointer}.ds-btn:focus-visible{outline:3px solid var(--focus,#b46518);outline-offset:3px}.ds-btn:active:not(:disabled){transform:translateY(1px)}.ds-btn:disabled{opacity:.45;cursor:not-allowed}@media(prefers-reduced-motion:reduce){.ds-btn:active:not(:disabled){transform:none}}.ds-dark{background:var(--ink,#20372d);color:var(--paper,#fff);border-color:var(--ink,#20372d);}.ds-dark:hover:not(:disabled){background:#345442;border-color:#345442}"
+    },
+    {
+      "name": "Campo do produto",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Campo rotulado do inspetor, com foco e erro.",
+      "html": "<label class=\"ds-label\" for=\"ds-name\">Nome do produto</label><input class=\"ds-input\" id=\"ds-name\" value=\"Vaso Canto\">",
+      "css": ".ds-label{font-family:Lato,sans-serif;display:block;font-size:12px;font-weight:700;color:#34493b;margin-bottom:7px}.ds-input{font-family:Lato,sans-serif;width:100%;min-width:0;min-height:40px;padding:10px 11px;border:1px solid #c9d0c4;border-radius:5px;background:var(--paper,#fff);color:var(--ink,#20372d);font-size:13px}.ds-input:focus-visible{outline:3px solid var(--focus,#b46518);outline-offset:3px}.ds-input[aria-invalid=true]{border-color:var(--error,#9a2c24)}.ds-input:disabled{background:#eef1eb}@media(max-width:760px){.ds-label{font-size:13px}.ds-input{font-size:16px;min-height:45px}}"
+    },
+    {
+      "name": "Abas do inspetor",
+      "kind": "nav",
+      "description": "A seleção usa sublinhado verde.",
+      "html": "<div class=\"ds-tabs\" role=\"tablist\" aria-label=\"O que editar\"><button role=\"tab\" aria-selected=\"true\">Produto</button><button role=\"tab\" aria-selected=\"false\">Página</button></div>",
+      "css": ".ds-tabs{display:flex;background:#f7f8f4;border-bottom:1px solid #e0e4db;padding:0 15px}.ds-tabs button{font-family:Lato,sans-serif;flex:1;min-height:40px;border:0;border-bottom:2px solid transparent;background:transparent;padding:14px 16px;font-size:13px;font-weight:700;color:var(--muted,#536257);cursor:pointer}.ds-tabs button[aria-selected=true]{border-bottom-color:var(--ink,#20372d);color:var(--ink,#20372d)}.ds-tabs button:hover{background:#e9ede5}.ds-tabs button:focus-visible{outline:3px solid var(--focus,#b46518);outline-offset:3px}"
+    },
+    {
+      "name": "Aviso de exemplo",
+      "kind": "chip",
+      "description": "Rótulo informativo sem interação.",
+      "html": "<span class=\"ds-badge\">Exemplo fictício</span>",
+      "css": ".ds-badge{font-family:Lato,sans-serif;display:inline-block;background:#e5dcc8;color:#69542d;padding:5px 8px;border-radius:4px;font-size:11px;font-weight:700}"
+    },
+    {
+      "name": "Produto da sequência",
+      "kind": "card",
+      "refersTo": "product-card",
+      "description": "Miniatura numerada e selecionável; o SVG representa a área da foto.",
+      "html": "<button class=\"ds-card\" aria-pressed=\"true\" aria-label=\"Editar produto 1: Vaso Canto\"><span class=\"ds-thumb\"><svg viewBox=\"0 0 138 64\" aria-hidden=\"true\"><rect width=\"138\" height=\"64\" fill=\"#d7ddcf\"/></svg></span><span class=\"ds-position\">01</span><span class=\"ds-caption\"><strong>Vaso Canto</strong><small>OBJ-001</small></span></button>",
+      "css": ".ds-card{font-family:Lato,sans-serif;position:relative;display:block;width:138px;border:0;padding:0;border-radius:6px;overflow:hidden;background:transparent;color:var(--ink,#20372d);text-align:left;cursor:pointer}.ds-card:hover:not(:disabled){background:#e2e8dc}.ds-card[aria-pressed=true]{outline:2px solid var(--ink,#20372d);outline-offset:1px}.ds-card:focus-visible{outline:3px solid var(--focus,#b46518);outline-offset:3px}.ds-card:active:not(:disabled){transform:translateY(1px)}.ds-card:disabled{opacity:.45;cursor:not-allowed}.ds-thumb{display:block;height:64px;overflow:hidden}.ds-thumb svg{display:block;width:100%;height:100%}.ds-position{position:absolute;left:6px;top:6px;background:#fff;color:var(--ink,#20372d);font-size:10px;font-variant-numeric:tabular-nums;min-width:21px;text-align:center;padding:3px 5px;border-radius:3px}.ds-caption{display:block;padding:6px 8px;min-height:40px}.ds-caption strong{display:block;font-size:11px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.ds-caption small{display:block;font-size:9px;margin-top:3px;color:var(--muted,#536257)}@media(max-width:760px){.ds-card{width:126px}.ds-thumb{height:87px}.ds-caption{padding:8px 8px 9px;min-height:47px}.ds-caption small{margin-top:4px}}@media(prefers-reduced-motion:reduce){.ds-card:active:not(:disabled){transform:none}}"
+    },
+    {
+      "name": "Papel sobre a bancada",
+      "kind": "custom",
+      "refersTo": "preview-stage",
+      "description": "Materiais da prévia; conteúdo SVG representativo usa as coordenadas reais de exportação.",
+      "html": "<div class=\"ds-stage\"><div class=\"ds-paper\"><svg viewBox=\"0 0 1191 1684\" role=\"img\" aria-label=\"Exemplo de folha\"><rect width=\"1191\" height=\"1684\" fill=\"#fff\"/><g font-family=\"Arial, Helvetica, sans-serif\" fill=\"#202a27\"><text x=\"56\" y=\"88\" font-size=\"36\" font-weight=\"600\">Objetos para o dia a dia</text><text x=\"56\" y=\"123\" font-size=\"16\" fill=\"#4c5852\">Exemplo de catálogo</text></g><g fill=\"#f1f3ef\"><rect x=\"56\" y=\"174\" width=\"530.5\" height=\"396\"/><rect x=\"604.5\" y=\"174\" width=\"530.5\" height=\"396\"/></g><g font-family=\"Arial, Helvetica, sans-serif\" font-size=\"15\" font-weight=\"600\" fill=\"#202a27\"><text x=\"56\" y=\"598\">01. Vaso Canto</text><text x=\"604.5\" y=\"598\">02. Luminária Arco</text></g></svg><div class=\"ds-selection\" aria-hidden=\"true\"></div></div></div>",
+      "css": ".ds-stage{height:300px;padding:22px;display:flex;align-items:center;justify-content:center;background:var(--stage,#dce0d5);border-radius:9px;overflow:hidden}.ds-paper{position:relative;height:100%;max-width:100%;max-height:100%;aspect-ratio:1191/1684;flex:none;background:var(--paper,#fff);box-shadow:var(--shadow,0 10px 28px #20372d26)}.ds-paper svg{display:block;width:100%;height:100%}.ds-selection{position:absolute;left:4.702%;top:10.3325%;width:44.5424%;height:23.5154%;outline:2px solid #bb7323;outline-offset:2px;border-radius:1px;pointer-events:none}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Mesa de edição",
+    "overview": "A interface adota a bancada de montagem: verde profundo na identidade, uma área de trabalho clara e uma folha branca centralizada. O produto editado aparece tanto na página quanto na sequência de miniaturas; o contorno de seleção associa esses dois contextos ao formulário.\n\nA densidade é de ferramenta de edição. Títulos curtos, campos compactos e ações visíveis cercam a prévia. O âmbar marca a entrada de fotos e os estados de atenção; a folha preserva sua própria geometria de impressão ao mudar a largura da janela.",
+    "keyCharacteristics": [
+      "Bancada em verdes discretos, com papel branco em destaque.",
+      "Lato local nos controles, com pesos regular e negrito.",
+      "Contornos e diferenças de superfície organizam os grupos.",
+      "Sequência horizontal numerada e seleção sincronizada com a folha."
+    ],
+    "rules": [
+      {
+        "name": "The Paper Rule",
+        "body": "O papel é branco; a bancada e os controles usam as superfícies verdes e neutras ao redor dele.",
+        "section": "colors"
+      },
+      {
+        "name": "The Same Product Rule",
+        "body": "A miniatura selecionada, seu formulário e o contorno na página representam o mesmo produto.",
+        "section": "layout"
+      },
+      {
+        "name": "The Surface Rule",
+        "body": "Painéis e miniaturas permanecem planos. A folha e o diálogo recebem a sombra que explica sua sobreposição.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do manter a sequência numerada e a seleção legível por contorno, além da cor.",
+      "Do conservar o foco visível, os rótulos dos campos e os nomes acessíveis dos botões com ícones.",
+      "Do ajustar a folha inteira à área disponível sem mudar sua proporção.",
+      "Do manter os campos móveis com texto de 16px e altura mínima de 45px.",
+      "Do usar SVG em linha para os ícones de interface, com traços arredondados."
+    ],
+    "donts": [
+      "Don't aplicar a sombra da folha a todos os controles e cartões.",
+      "Don't transportar o contorno de seleção da interface para o arquivo exportado.",
+      "Don't esconder o estado selecionado das abas ou dos produtos.",
+      "Don't substituir os arquivos locais de Lato por dependência remota de fonte."
+    ]
+  }
+}

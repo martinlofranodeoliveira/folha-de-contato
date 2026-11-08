@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.openai/
+*.log
+.impeccable/review/
+.impeccable/mocks/
+.impeccable/direction-options.json
+.impeccable/config.local.json
+
+.impeccable/questions/
